@@ -1,0 +1,122 @@
+Week 1: August 26 - September 2
+    - Focused on finding website to pull deck data from 
+    - Found HSReplay and have been using the inspect elements to pull the data
+    - Pulled the data using two_deck-text.txt 
+Week 2: September 2 - September 9
+    - Began working on pulling cards data
+    - Found online hearthstonejson 
+    - Used JSON file with all card data
+    - Pulled data and began putting cards into MYSQL database using PYTHON
+Week 3: September 9 - September 16
+    - Finished pulling all card data and created table for cards
+    - Created table for decks
+    - Made FK for decks table be the id and PK of card
+Week 4: September 16 - September 23
+    - Work on pulling data from MYSQL to Panda dataframes
+    - Figure out how to begin processing data to get Models to run on it 
+    - Maybe add some more decks
+    - Make basic Model with ID input and win percentage prediction
+    - Possible concerns are the: what happens if card in testing data and not in training data 
+                                 Difference between card ID is poorly defined
+    - Drop deck_id from table
+    - Try to get a ton of decks 
+    - Then begin generating decks process 
+    - So for N-armed bandit we would do a 30 armed bandit and then have it pull 30 cards, run through logistic regression and then predict win rate where higher the better the reward
+Week 5: September 24 - September 31
+    - Make sure each deck can only have 2 cards when reandomly selecting cards
+    - Figure how to run neural network instead of linear
+    - Use Pyribs package and figure out map elites that evolve for random card choosing
+    - More decks
+    - Visualize Data
+    - Google collab
+    - Put db on cs.trinity.edu
+    - 
+Week 6: October 1 - October 8
+    - Work on getting all decks I can
+    - Work on running a neural network on data
+    - Changed input for model from deck id to card id's
+    - Got all of the decks, issues with cards now should not be too difficult
+Week 7: October 9 - October 16
+    - Found issue with cards, working now
+    - Neural Network working with card_ id's as input and output win rate
+    - Work on encoding card data to run on neural network
+Week 8: October 17 - October 24
+    - Countinue work on encoding, specifically creating a dictionary (should be majority of work)
+    - Make sure all card data makes sense and is inside (should be very simple)
+    - Ways of generating deck:
+        - Mutation:
+            - Swap on card id with another
+            - Swap a 4 mana card for another 4 mana card
+        - Breeding:
+            - 2 decks and combine half of both decks and make sure its still legal deck
+            - 
+        - Use some type of hill climbing algorithm: 
+        - Most simple:
+            - find each deck win rate 
+            - Take top half of decks:   
+                - Breed the decks in the top half
+                    - Take top 50% again and breed that 50% with each other again
+                    - Do this for x iterations
+Week 9:
+    - Make sure I stay at N every iteration
+    - For card data add dust and ' if legendary'
+    - Look at neural network and make sure answers are in 0-1 range
+    - Make sure that edge cases with neural network makes sense
+    - For evolutionary algorithm:
+        - Add Legendary and 3 of a card retriction: deck with 3 changes to 0
+
+    - Find a way of bettering the neural network
+        - Past the description as a dictionary (See the size of it)
+        - Replacing id with card data
+        - Legendary 
+Week 10:
+    - Make 120 random decks not just selected from testing
+    - See if those random decks are generated only from training data cards
+    - Make the legendary restraint
+    - Add a 20 old best decks 80 mutated breading 20 random new decks (make sure I stay at N)
+    - Check Results and if still bad start working on the improvement of the neural network encoding
+    - Find people to play hearthstone
+    - Or Map elites for evolutionary algorithm
+
+    - Vectorized basic card information and run nerual network on that and see if results are better for untrained cards
+    - Vectors of all the cards and all words and then each card in that order assign 0 and 1 
+    - Auto-Encoder
+    - Change network itself later
+    - Deck Types in card generation
+        - Vectorize the card information based on spell vs minion vs Quest
+    - Fully connected layer to mess with binary values vs continous values
+
+Week 11:  
+        - Finaliza the vectors for each card
+            - Make sure nodes match type
+        - Auto-encoder for single card
+        - See how accurate 
+        - Run with FC layer
+        - Have something that is working on MLPRegressor by next week
+        - Are you okay with being on my comittee week 11
+
+Week 12:
+        - Talk to Dr. Zhang about graduating with honors and my requirements
+        - Dr. Tan and Dr. Zhang: Email both of them asking
+        - Everytime you get a new card you add it to dictionary
+        - Make output layer Sigmoid, maybe the rest relu, 
+
+Week 13:
+        - Different ways of doing Back-Propagation: I am using LBFGS for MLPRegression
+            - Find Paper on this  
+        - Ask Friend to try top 10 Hearthstone decks, can you try them?
+            - Get data from the game
+            - Quantitative vs Qualitative
+        - Maybe add on MAP Elites to end and so I can have it all out there
+        - Have to include in part of training processs, how do we do this?
+Second Semester
+Week 14: 
+        - We agree that the NN should be okay and want to start moving on
+        - Need to work on constraints
+        - Need to work on the actual survey
+Week 15: 
+        - Worked on Surveys
+        - Discussed possibilities of 
+
+
+    
